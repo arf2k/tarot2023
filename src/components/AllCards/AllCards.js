@@ -10,9 +10,8 @@ function AllCards() {
   useEffect(() => {
     setIsLoading(true);
     fetchAllCards()
-      .then(data => {
-          console.log(data)
-        setCards(data);
+      .then(response => {
+           setCards(response);
         setIsLoading(false);
       })
       .catch(error => {
@@ -21,8 +20,7 @@ function AllCards() {
       });
   }, []);
 
-
-
+console.log(cards)
 // const fetchAllCards = () => {
 //      return fetch("https://tarot-api.onrender.com/api/v1/")
 //        .then(response => response.json())

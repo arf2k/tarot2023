@@ -1,19 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import { fetchAllCards } from './api/api';
-import reducer from './redux/reducers/reducer';
-import AllCards from './AllCards/AllCards.js';
+import AllCards from './components/AllCards/AllCards';
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const App = () => {
+  return (
+    <>
+      <h1>Alex's Tarot App</h1>
+      <AllCards/>
+    </>
+  );
+};
 
-store.dispatch(fetchAllCards());
-
-ReactDOM.render(
-  <Provider store={store}>
-    <AllCardsPage />
-  </Provider>,
-  document.getElementById('root')
-);
+export default App;
