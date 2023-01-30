@@ -1,10 +1,10 @@
-import AllCards from './components/AllCards/AllCards';
+import AllCardsContainer from './containers/AllCardsContainer/AllCardsContainer';
 
 const App = () => {
   return (
     <>
       <h1>Alex's Tarot App</h1>
-      <AllCards/>
+      <AllCardsContainer/>
     </>
   );
 };
